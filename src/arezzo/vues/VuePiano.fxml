@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="355.0" prefWidth="1047.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arezzo.controllers.VuePianoController">
+    <children>
+        <HBox layoutX="20.0" layoutY="17.0" prefHeight="320.0" prefWidth="1032.0" spacing="15.0">
+            <children>
+                <VBox prefHeight="320.0" prefWidth="400.0" spacing="10.0">
+                    <children>
+                        <Pane prefHeight="284.0" prefWidth="391.0">
+                            <children>
+                                <Button fx:id="DoBlanche" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="ReBlanche" layoutX="56.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="MiBlanche" layoutX="112.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="SolBlanche" layoutX="221.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="FaBlanche" layoutX="165.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="LaBlanche" layoutX="277.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="SiBlanche" layoutX="333.0" mnemonicParsing="false" prefHeight="285.0" prefWidth="56.0" style="" text="" />
+                                <Button fx:id="DoNoir" layoutX="36.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="40.0" style="-fx-background-color: black;" text="" />
+                                <Button fx:id="ReNoir" layoutX="92.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="40.0" style="-fx-background-color: black;" text="" />
+                                <Button fx:id="FaNoir" layoutX="201.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="40.0" style="-fx-background-color: black;" text="" />
+                                <Button fx:id="SolNoir" layoutX="257.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="40.0" style="-fx-background-color: black;" text="" />
+                                <Button fx:id="LaNoir" layoutX="313.0" mnemonicParsing="false" prefHeight="136.0" prefWidth="40.0" style="-fx-background-color: black;" text="" />
+                            </children>
+                        </Pane>
+                        <Button fx:id="Silence" mnemonicParsing="false" prefHeight="25.0" prefWidth="392.0" text="Chuuuuuuuuuuut" />
+                    </children>
+                </VBox>
+                <VBox prefHeight="475.0" prefWidth="100.0" spacing="20.0">
+                    <children>
+                        <RadioButton fx:id="Aigue" mnemonicParsing="false" text="Aigu">
+                            <toggleGroup>
+                                <ToggleGroup fx:id="Type" />
+                            </toggleGroup></RadioButton>
+                        <RadioButton fx:id="Medium" mnemonicParsing="false" selected="true" text="Meduim" toggleGroup="$Type" />
+                        <RadioButton fx:id="Grave" mnemonicParsing="false" text="Grave" toggleGroup="$Type" />
+                        <RadioButton fx:id="Ronde" layoutX="10.0" layoutY="64.0" mnemonicParsing="false">
+                            <graphic>
+                                <ImageView fitHeight="22.0" fitWidth="39.0">
+                                    <image>
+                                        <Image url="@/images-notes/images/ronde.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                            <toggleGroup>
+                                <ToggleGroup fx:id="Durees" />
+                            </toggleGroup>
+                        </RadioButton>
+                        <RadioButton fx:id="Blanche" layoutX="10.0" layoutY="91.0" mnemonicParsing="false" toggleGroup="$Durees">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image preserveRatio="true" requestedHeight="30" requestedWidth="30" smooth="true" url="@/images-notes/images/blanche.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="Noire" layoutX="10.0" layoutY="118.0" mnemonicParsing="false" toggleGroup="$Durees">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image preserveRatio="true" requestedHeight="30" requestedWidth="30" smooth="true" url="@/images-notes/images/noire.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </RadioButton>
+                        <RadioButton fx:id="Croche" layoutX="10.0" layoutY="145.0" mnemonicParsing="false" toggleGroup="$Durees">
+                            <graphic>
+                                <ImageView>
+                                    <image>
+                                        <Image preserveRatio="true" requestedHeight="30" requestedWidth="30" smooth="true" url="@/images-notes/images/croche.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </RadioButton>
+                    </children>
+                </VBox>
+                <VBox prefHeight="300.0" prefWidth="500.0">
+                    <children>
+                        <Button fx:id="Play" mnemonicParsing="false" prefHeight="135.0" prefWidth="168.0" text="">
+                            <VBox.margin>
+                                <Insets left="176.0" top="25.0" />
+                            </VBox.margin>
+                            <graphic>
+                                <ImageView fitHeight="93.0" fitWidth="96.0">
+                                    <image>
+                                        <Image url="@/images-notes/play.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </Button>
+                        <HBox prefHeight="50.0" prefWidth="500.0" spacing="50.0">
+                            <children>
+                                <Label text="Volume" />
+                                <Slider fx:id="Volume" prefHeight="14.0" prefWidth="307.0" showTickLabels="true" showTickMarks="true" value="100.0" />
+                            </children>
+                            <VBox.margin>
+                                <Insets top="15.0" />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="40.0" top="18.0" />
+                            </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="500.0" spacing="50.0">
+                            <children>
+                                <Label text="Tempo" />
+                                <Slider fx:id="Tempo" max="220.0" prefHeight="14.0" prefWidth="309.0" showTickLabels="true" showTickMarks="true" value="180.0" />
+                            </children>
+                            <padding>
+                                <Insets left="40.0" top="17.0" />
+                            </padding>
+                        </HBox>
+                        <HBox prefHeight="50.0" prefWidth="500.0" spacing="30.0">
+                            <children>
+                                <Label />
+                                <RadioButton fx:id="Piano" mnemonicParsing="false" selected="true" text="Piano">
+                                    <toggleGroup>
+                                        <ToggleGroup fx:id="Instru" />
+                                    </toggleGroup></RadioButton>
+                                <RadioButton fx:id="Guitare" layoutX="100.0" layoutY="27.0" mnemonicParsing="false" text="Guitare" toggleGroup="$Instru" />
+                                <RadioButton fx:id="Saxo" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" text="Saxophone" toggleGroup="$Instru" />
+                                <RadioButton fx:id="Trompette" layoutX="60.0" layoutY="27.0" mnemonicParsing="false" text="Trompette" toggleGroup="$Instru" />
+                            </children>
+                            <padding>
+                                <Insets left="50.0" top="18.0" />
+                            </padding>
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </children>
+</Pane>

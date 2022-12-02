@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<Pane prefHeight="330.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arezzo.controllers.VuePartitionController">
+   <children>
+      <VBox layoutX="13.0" layoutY="7.0" prefHeight="311.0" prefWidth="992.0">
+         <children>
+            <Label fx:id="Name" alignment="CENTER" contentDisplay="CENTER" graphicTextGap="0.0" prefHeight="52.0" prefWidth="983.0" text="NoTitle" textAlignment="CENTER">
+               <font>
+                  <Font name="Ubuntu Italic" size="36.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="251.0" prefWidth="995.0">
+               <children>
+                  <ScrollPane fx:id="MelodiePane" fitToHeight="true" prefHeight="237.0" prefWidth="912.0" vbarPolicy="ALWAYS" />
+                  <Button fx:id="LesNotes" contentDisplay="TOP" mnemonicParsing="false" prefHeight="140.0" prefWidth="143.0" text="Les Notes">
+                     <graphic>
+                        <ImageView fitHeight="110.0" fitWidth="114.0">
+                           <image>
+                              <Image preserveRatio="true" requestedHeight="128" requestedWidth="128" smooth="true" url="@/images-notes/lesnotes.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+   </children>
+</Pane>
